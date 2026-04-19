@@ -1,4 +1,4 @@
-# Stage 1: Build
+# Stage 1: Builder
 FROM python:3.11-slim AS builder
 
 WORKDIR /app
@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --user -r requirements.txt
 
-# Stage 2: Runtime (smaller image)
+# Stage 2: Runtime
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -14,13 +14,13 @@ WORKDIR /app
 # Create non-root user
 RUN useradd -m appuser
 
-# Copy installed dependencies
+# Copy installed packages
 COPY --from=builder /root/.local /home/appuser/.local
 
-# Copy app code
+# Copy app
 COPY . .
 
-# Set permissions
+# Permissions
 RUN chown -R appuser:appuser /app
 
 USER appuser
