@@ -5,7 +5,9 @@ A minimal Flask API for demonstrating secure source code management, automated C
 ## Endpoints
 - `/hello`
 - `/health`
+- /return
 
 ##Contributors
 #Jordan Zvinya R2511937T
 #Norma Mutsungi R2511324J
+#Francis P Kusema R254327B
