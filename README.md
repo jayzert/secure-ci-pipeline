@@ -9,4 +9,3 @@ A minimal Flask API for demonstrating secure source code management, automated C
 ##Contributors
 #Jordan Zvinya R2511937T
 #Norma Mutsungi R2511324J
-#Francis Kusema R254327B
